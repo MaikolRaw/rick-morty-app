@@ -9,6 +9,8 @@ Mapa interactivo con Leaflet, mostrando una ruta entre dos puntos de Bogotá y l
 
 WebSocket (opcional) con modo simulado y real, capaz de mostrar mensajes y enviar confirmaciones.
 
+Desplegado en Vercel para su fácil acceso y revisión.
+
 1. Requerimientos
 Node.js (v14+ o v16+ recomendado).
 
@@ -16,39 +18,7 @@ Angular CLI (v15+ o v16+) si deseas ejecutar comandos de Angular.
 
 Conexión a internet para instalar dependencias y probar la API de Rick & Morty.
 
-2. Estructura del Proyecto
-
-rick-and-morty-app/
-├── src/
-│   ├── app/
-│   │   ├── core/
-│   │   │   ├── layout/           # Layout principal (navbar, footer)
-│   │   │   ├── navbar/
-│   │   │   └── footer/
-│   │   ├── components/
-│   │   │   ├── character-list/   # Lista paginada de personajes
-│   │   │   ├── character-detail/ # Detalle de personaje
-│   │   │   ├── map/              # Mapa interactivo con Leaflet
-│   │   │   └── distance-dialog/  # Diálogo para mostrar la distancia
-│   │   ├── guards/
-│   │   │   └── character-exists.guard.ts  # Evita acceder al detalle si no existe
-│   │   ├── interceptors/
-│   │   │   └── http-error.interceptor.ts  # Manejo global de errores HTTP
-│   │   ├── models/
-│   │   │   └── character.model.ts         # Modelo de datos para un personaje
-│   │   ├── services/
-│   │   │   ├── rick-and-morty.service.ts  # Consumo de la API Rick & Morty
-│   │   │   ├── websocket.service.ts       # Conexión/WebSocket simulado
-│   │   │   └── map.service.ts             # (Opcional) Lógica de Leaflet
-│   │   ├── app.routes.ts                  # Definición de rutas
-│   │   └── app.component.ts               # Componente raíz
-│   ├── environments/
-│   │   ├── environment.ts
-│   │   └── environment.prod.ts
-│   ├── main.ts
-│   ├── styles.scss                         # Estilos globales (incluye leaflet.css)
-├── package.json
-└── README.md
+![alt text](image.png)
 
 Características Principales
 Paginación: Usa la API de Rick & Morty para mostrar la lista de personajes por página.
@@ -59,13 +29,15 @@ Mapa: Usa Leaflet para trazar una ruta entre dos puntos (Bogotá), mostrando la 
 
 WebSocket: Conexión real o simulada (cada 5s) para mostrar mensajes.
 
+Despliegue: Disponible en Vercel para revisión inmediata.
+
 3. Instalación
 Clona el repositorio
 
 
 
 git clone https://github.com/MaikolRaw/rick-morty-app.git
-cd rick-and-morty-app
+cd rick-morty-app
 Instala las dependencias
 
 
@@ -98,17 +70,27 @@ Si el personaje no existe, se redirige a /characters.
 
 Mapa: http://localhost:4200/map muestra un mapa centrado en Bogotá, traza una ruta y abre un diálogo con la distancia calculada.
 
-WebSocket: Si simulateWebSocket está en true, cada 5s simulará un mensaje del backend. Si está en false, conectará a environment.websocketUrl.
+WebSocket:
+
+Si simulateWebSocket está en true, cada 5s simulará un mensaje del backend.
+
+Si está en false, conectará a environment.websocketUrl.
 
 5. Despliegue
-Puedes desplegar en cualquier plataforma (Vercel, Netlify, etc.). Ejemplo con Netlify:
+El proyecto está desplegado en Vercel. Puedes acceder a la versión en línea a través del siguiente enlace (ejemplo):
 
+arduino
+
+https://rick-morty-app.vercel.app
+(Cambia la URL si usas otro dominio)
+
+Otras plataformas (Netlify, etc.)
 Build de producción
 
 
 
 ng build --prod
-Sube la carpeta dist/rick-and-morty-app a Netlify.
+Sube la carpeta dist/rick-morty-app a tu plataforma de hosting.
 
 Configura un redirect para rutas de Angular (si es necesario).
 
@@ -129,7 +111,7 @@ Mapa Leaflet:
 
 Importa leaflet.css en styles.scss.
 
-MapService opcional para desacoplar la lógica de Leaflet.
+MapService (opcional) para desacoplar la lógica de Leaflet.
 
 WebSocket:
 
@@ -137,11 +119,12 @@ WebsocketService puede simular mensajes cada 5 segundos o conectarse a un servid
 
 Expone connectionError$ para que los componentes se suscriban a errores.
 
-8. Créditos
-API: Rick and Morty API.
+7. Créditos
+API: Rick and Morty API
 
-Mapa: Leaflet + OpenStreetMap.
+Mapa: Leaflet + OpenStreetMap
 
-Autor: Maikol Ortiz.
+Autor: Maikol Ortiz
 
-Fecha: 03/25/2025.
+Fecha: 03/25/2025
+

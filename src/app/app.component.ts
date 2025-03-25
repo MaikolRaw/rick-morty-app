@@ -13,7 +13,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 export class AppComponent implements OnInit {
   errorMessage: string = '';
-  tittle = 'Rick and Morty';
+  title = 'Rick and Morty';
 
   constructor(private wsService: WebsocketService) {}
 
