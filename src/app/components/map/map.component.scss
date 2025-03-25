@@ -1,0 +1,24 @@
+/*
+  Centra la tarjeta y le da un ancho máximo
+  para que no se extienda en pantallas muy grandes
+*/
+.map-card {
+  margin: 16px auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+/*
+  Contenedor del mapa:
+  - 100% de ancho
+  - 400px de alto
+  - borde y bordes redondeados para estilo
+*/
+.map-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}

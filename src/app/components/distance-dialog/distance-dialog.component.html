@@ -1,0 +1,11 @@
+<!--
+  Diálogo que muestra la distancia calculada en kilómetros.
+  Se usa data.distance para mostrar el valor.
+-->
+<h2 mat-dialog-title>Distancia Calculada</h2>
+<mat-dialog-content>
+  <p>La distancia entre los puntos es de <strong>{{ data.distance.toFixed(2) }} km</strong>.</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close color="primary">Cerrar</button>
+</mat-dialog-actions>

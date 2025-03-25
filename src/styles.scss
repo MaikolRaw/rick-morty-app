@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importar Angular Material */
+@use '@angular/material' as mat;
+/* Importar Leaflet */
+@import "leaflet/dist/leaflet.css";
+
+
+:root {
+  --card-width: 180px;
+  --card-gap: 16px;
+  --max-content-width: 1200px; // Ajuste global para contenedores
+}
+
+
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

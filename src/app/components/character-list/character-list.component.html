@@ -1,0 +1,58 @@
+<!--
+  Contenedor principal para la lista de personajes.
+  Si 'isLoading' es true, muestra un spinner.
+  Si hay un 'errorMessage', muestra el mensaje.
+  De lo contrario, muestra el grid de tarjetas y los controles de paginación.
+-->
+<div class="list-container">
+
+  <!-- Spinner de carga -->
+  <div *ngIf="isLoading" class="loading-container">
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  </div>
+
+  <!-- Mensaje de error -->
+  <div *ngIf="!isLoading && errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Grid de tarjetas con los personajes -->
+  <div *ngIf="!isLoading && !errorMessage" class="character-grid">
+    <mat-card
+      *ngFor="let character of characters"
+      class="character-card"
+      (click)="goToDetail(character.id)"
+    >
+      <img mat-card-image [src]="character.image" alt="{{ character.name }}">
+      <mat-card-content>
+        <h4>{{ character.name }}</h4>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Controles de paginación -->
+  <div *ngIf="!isLoading && !errorMessage" class="pagination-controls">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="prevPage()"
+      [disabled]="currentPage === 1"
+    >
+      Anterior
+    </button>
+
+    <span class="page-info">
+      Página {{ currentPage }} de {{ totalPages }}
+    </span>
+
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="nextPage()"
+      [disabled]="currentPage === totalPages"
+    >
+      Siguiente
+    </button>
+  </div>
+
+</div>

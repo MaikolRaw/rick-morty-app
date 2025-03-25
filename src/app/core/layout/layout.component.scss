@@ -1,0 +1,16 @@
+.layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-content {
+  flex: 1;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}

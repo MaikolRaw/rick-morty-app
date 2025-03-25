@@ -1,0 +1,77 @@
+/*
+  Contenedor principal de la lista:
+  - max-width: 1200px limita el ancho en pantallas grandes
+  - margin: 0 auto centra horizontalmente
+  - display: flex y flex-direction: column organizan verticalmente
+*/
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*
+  Centra el spinner cuando se está cargando
+*/
+.loading-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/*
+  Mensaje de error en color rojo y texto centrado
+*/
+.error-message {
+  color: #d32f2f;
+  text-align: center;
+  font-size: 18px;
+}
+
+/*
+  Grid de tarjetas para los personajes:
+  - repeat(auto-fill, minmax(180px, 1fr)) crea columnas de 180px mínimo
+  - justify-items: center centra cada tarjeta en su columna
+*/
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  justify-items: center;
+}
+
+/*
+  Tarjeta de cada personaje:
+  - 180px de ancho fijo
+  - animación al hover (ligero "lift")
+*/
+.character-card {
+  width: 180px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+}
+
+/*
+  Controles de paginación centrados
+*/
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+/*
+  Información de la página (ej. "Página 1 de 34")
+*/
+.page-info {
+  font-size: 16px;
+  font-weight: 500;
+}

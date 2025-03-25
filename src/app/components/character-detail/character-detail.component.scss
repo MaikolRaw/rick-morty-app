@@ -1,0 +1,40 @@
+/*
+  Centra el contenedor y limita el ancho
+  para que el detalle no ocupe toda la pantalla.
+*/
+.detail-container {
+  display: flex;
+  justify-content: center;
+  margin: 16px auto;
+  max-width: 1200px;
+}
+
+/*
+  Ajustes de la tarjeta que muestra el detalle:
+  - Ancho máximo de 320px para que sea compacta.
+  - margin: 0 auto para centrar la tarjeta dentro del contenedor.
+*/
+.detail-card {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+
+  img {
+    /* object-fit: cover mantiene la imagen recortada.
+       Si prefieres que se vea completa, usa contain. */
+    object-fit: cover;
+  }
+}
+
+/*
+  Tarjeta que se muestra cuando hay un error,
+  con un color de fondo distintivo y texto centrado.
+*/
+.error-card {
+  background-color: #ffebee;
+  color: #c62828;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 16px;
+}

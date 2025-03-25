@@ -1,0 +1,17 @@
+/*
+  Ajustes de tamaño y tipografía para la navbar:
+  - Reducimos la altura si queremos algo más compacto.
+*/
+
+.navbar-toolbar {
+  min-height: 56px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

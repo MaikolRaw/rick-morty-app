@@ -1,0 +1,17 @@
+/*
+  Footer fijo al final de la página. Ajusta la altura
+  para que sea consistente con tu layout.
+*/
+
+.footer-container {
+  background-color: #e0e0e0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  font-size: 0.9rem;
+  color: #424242;
+}

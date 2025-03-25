@@ -1,0 +1,32 @@
+<!--
+  Contenedor principal centrado. Si hay un personaje, se muestra el mat-card;
+  si no, se muestra la plantilla de error.
+-->
+<div class="detail-container">
+  <mat-card *ngIf="character; else errorTpl" class="detail-card">
+    <mat-card-header>
+      <!-- Título principal con el nombre del personaje -->
+      <mat-card-title>{{ character.name }}</mat-card-title>
+    </mat-card-header>
+
+    <!-- Imagen del personaje -->
+    <img mat-card-image [src]="character.image" alt="{{ character.name }}">
+
+    <!-- Contenido con detalles del personaje -->
+    <mat-card-content>
+      <p><strong>Status:</strong> {{ character.status }}</p>
+      <p><strong>Especie:</strong> {{ character.species }}</p>
+      <p><strong>Género:</strong> {{ character.gender }}</p>
+      <p><strong>Origen:</strong> {{ character.origin.name }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Plantilla que se muestra si no se pudo cargar el personaje -->
+  <ng-template #errorTpl>
+    <mat-card class="error-card">
+      <mat-card-content>
+        <p>{{ errorMessage }}</p>
+      </mat-card-content>
+    </mat-card>
+  </ng-template>
+</div>
