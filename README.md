@@ -64,7 +64,7 @@ Clona el repositorio
 
 
 
-git clone https://github.com/tu-usuario/rick-and-morty-app.git
+git clone https://github.com/MaikolRaw/rick-morty-app.git
 cd rick-and-morty-app
 Instala las dependencias
 
