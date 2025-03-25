@@ -81,8 +81,8 @@ El proyecto está desplegado en Vercel. Puedes acceder a la versión en línea a
 
 arduino
 
-https://rick-morty-app.vercel.app
-(Cambia la URL si usas otro dominio)
+https://rick-morty-app-762j.vercel.app/characters
+
 
 Otras plataformas (Netlify, etc.)
 Build de producción
